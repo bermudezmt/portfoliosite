@@ -1,0 +1,17 @@
+src="/wp-content/themes/webcraft/library/images/header_bg_v2.png" 
+
+.show .hero h1 .small:nth-child(1) {
+    animation: 0.5s cubic-bezier(0.865, -0.15, 0.085, 1.21) 0s normal both 1 home-hero-small;
+}
+.show .hero h1 .small {
+    visibility: visible;
+}
+.home .hero h1 .small {
+    display: block;
+    font-family: "adobe-garamond-pro","Adobe Garamond Pro","Georgia",serif;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: none;
+    visibility: hidden;
+}

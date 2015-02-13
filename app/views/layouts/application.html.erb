@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Nycbwecraft</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+  	<title> <%= full_title(yield(:title))  %> </title>
+  	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  	<%= csrf_meta_tags %>
+  	<%= render 'layouts/shim' %>	
+	</head>
+	<body>
+		<div id="container">
+			<%= render 'layouts/header' %>
+			<div id="container-fluid">
+				<div id="inner-content" class="wrap clearfix">
+					<div id="leftbar">
+						<%= image_tag("leftbar.png", class: "stretch") %>
+					</div>
+				    <div id="rightbar">
+				    	<%= image_tag("rightbar.png", class: "stretch") %>
+				    </div>
+					<div id="main" class="eightcol first clearfix">
+						<%= yield %>
+					</div>
+				<%= render 'layouts/footer' %>
+				<%= debug (params) if Rails.env.development? %>
+			</div>
+		</div>
+	</body>
 
-<%= yield %>
-
-</body>
 </html>

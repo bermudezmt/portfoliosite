@@ -6,15 +6,16 @@ group :development, :test do
 	gem 'sqlite3'
 	gem 'rspec-rails'
 	gem 'capybara'
-	gem 'bcrypt-ruby'
-  gem 'factory_girl_rails'
+	gem 'bcrypt'
+        gem 'factory_girl_rails'
 end
 
 group :assets do
 	gem 'sass-rails', '~> 5.0'
+	gem 'compass-rails'
 	gem 'uglifier', '>= 1.3.0'
 	gem 'coffee-rails', '~> 4.1.0'
-	gem 'jquery-rails'
+	gem 'jquery-ui-rails'
 	gem 'turbolinks'
 end
 
